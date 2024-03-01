@@ -7,7 +7,7 @@ fun main (){
         numeroPrimo = false
 
         }else {
-            for (i in 2 until numero / 2 + 1) {
+            for (i in 2 until numero / 2 + 1) { // util define el limite 
                 if ( numero % i == 0) {
                     numeroPrimo = false
                     break

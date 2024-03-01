@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <item name="emailET" type="id" />
+    <item name="imageView" type="id" />
+    <item name="passwordET" type="id" />
+    <item name="loginBtn" type="id" />
 </resources>
