@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/backgroundImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background1"
+        android:scaleType="centerCrop"
+        android:alpha="0.84" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+
+        <EditText
+            android:id="@+id/emailET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:hint="@string/correo_electronico"
+            android:importantForAutofill="yes"
+            android:inputType="textEmailAddress"
+            android:minWidth="100dp"
+            android:minHeight="48dp"
+            android:textColorHint="@android:color/white"
+            android:backgroundTint="@android:color/white"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="22sp"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@id/passwordET"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/passwordET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:minWidth="100dp"
+            android:hint="@string/password"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@id/loginBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emailET"
+            android:textColorHint="@android:color/white"
+            android:backgroundTint="@android:color/white"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:text="@string/iniciar_sesion"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/passwordET"
+            android:backgroundTint="#B20000"
+            android:textSize="22sp"
+            android:fontFamily="@font/poppinssemibold"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

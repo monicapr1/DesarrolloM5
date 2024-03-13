@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.DetailActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideV1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideV2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideH1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="270dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideH2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideH3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.86" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="270dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dc"
+        android:tintMode="src_atop"
+        app:layout_constraintBottom_toTopOf="@id/guideH1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#99000000" />
+
+    <ImageView
+            android:id="@+id/imageViewHeroe"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@drawable/sh2"
+            app:layout_constraintTop_toBottomOf="@id/guideH2"
+            app:layout_constraintStart_toEndOf="@id/guideV1"
+            app:layout_constraintBottom_toTopOf="@id/guideH3"
+            app:layout_constraintEnd_toStartOf="@id/guideV2"
+            app:layout_constraintHorizontal_bias="0"/>
+
+        <TextView
+            android:id="@+id/txtHeroeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nombre_del_heroe"
+            app:layout_constraintStart_toEndOf="@id/imageViewHeroe"
+            app:layout_constraintEnd_toStartOf="@+id/guideV2"
+            app:layout_constraintTop_toBottomOf="@id/guideH1"
+            app:layout_constraintBottom_toTopOf="@id/guideH3"
+            android:layout_marginTop="30dp"
+            android:textSize="26sp"
+            android:lineBreakStyle="normal"/>
+    <TextView
+        android:id="@+id/txtHeroeDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideV2"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginTop="10dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guideV1"
+        app:layout_constraintTop_toBottomOf="@id/imageViewHeroe"
+        android:text="@string/descripcion_del_heroe"
+        android:textSize="20sp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
