@@ -1,6 +1,7 @@
 package com.example.heroesapp.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.heroesapp.R
@@ -22,7 +23,14 @@ class DetailActivity : AppCompatActivity() {
         imgHeroe = findViewById(R.id.imageViewHeroe)
 
         val heroeId = intent.getIntExtra("heroeId", 0)
+        Log.i("DetailActivity", "ID del héroe recibido: $heroeId")
         val heroe = Heroe.heroes.find { it.id == heroeId }
+        if (heroe != null) {
+            Log.i("DetailActivity", "Héroe encontrado: ${heroe.name}")
+        } else {
+            Log.e("DetailActivity", "No se encontró ningún héroe con el ID proporcionado")
+        }
+
         txtHeroeName.text = heroe?.name
         txtHeroeDescription.text = heroe?.description
         Picasso.get().load(heroe?.image ?: R.drawable.sh14).into(imgHeroe)

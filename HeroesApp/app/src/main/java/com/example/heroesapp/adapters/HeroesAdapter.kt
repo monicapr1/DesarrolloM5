@@ -1,5 +1,6 @@
 package com.example.heroesapp.adapters
 
+import android.content.Intent
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.heroesapp.R
 import com.example.heroesapp.models.Heroe
+import com.example.heroesapp.ui.HeroeActivity
 import com.squareup.picasso.Picasso
 
 class HeroesAdapter(val heroes: List<Heroe>, val onClick:(Heroe) -> Unit) : RecyclerView.Adapter<HeroesAdapter.HeroesViewHolder>() {
@@ -29,22 +31,24 @@ class HeroesAdapter(val heroes: List<Heroe>, val onClick:(Heroe) -> Unit) : Recy
         return heroes.size
     }
 
-    override fun onBindViewHolder(holder: HeroesViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: HeroesAdapter.HeroesViewHolder, position: Int) {
         val hero = heroes[position]
         holder.heroNameTextView.text = hero.name
         if (hero.itemId == 1) {
             // DC
-
-            holder.heroNameTextView.setTextColor(Color.parseColor("#0078D4"))
+            holder.heroNameTextView.setTextColor(Color.parseColor("#005A9E"))
             holder.frameLayout.setBackgroundResource(R.drawable.circle_background_dc)
         } else {
             // Marvel
             holder.heroNameTextView.setTextColor(Color.parseColor("#FF0000"))
             holder.frameLayout.setBackgroundResource(R.drawable.circle_background_marvel)
         }
-        Picasso.get().load(hero.image).into(holder.heroImageView)
+        holder.heroImageView.setImageResource(hero.image)
         holder.itemView.setOnClickListener {
             onClick(hero)
+            }
+
         }
     }
-}
+
+

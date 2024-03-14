@@ -23,6 +23,7 @@
         <activity
             android:name=".ui.HeroeActivity"
             android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
