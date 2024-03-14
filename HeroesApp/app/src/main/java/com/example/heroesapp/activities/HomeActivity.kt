@@ -28,7 +28,7 @@ class HomeActivity : AppCompatActivity() {
             }
             startActivity(intent)
         }
-        publisherRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        publisherRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
         val sharedPreferences = getSharedPreferences("mypref", MODE_PRIVATE)
         logoutBtn = findViewById(R.id.logoutButton)

@@ -4,10 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.HomeActivity"
-    android:background="@drawable/background1"
-    android:backgroundTintMode="src_atop"
-    android:alpha="0.84">
+    tools:context=".activities.HomeActivity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -38,14 +35,14 @@
             app:layout_constraintStart_toEndOf="@id/guideV1"
             app:layout_constraintEnd_toStartOf="@id/guideV2"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/publisherTitle"
             android:gravity="center_vertical">
 
 
             <TextView
+                android:id="@+id/publisherTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/textosBlancos"
+                android:textColor="@color/colorStatusBar"
                 android:text="@string/bienvenido"
                 android:textSize="24sp"
                 android:textStyle="bold"/>
@@ -65,27 +62,16 @@
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/publisherTitle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textColor="@color/textosBlancos"
-            android:text="@string/items"
-            app:layout_constraintTop_toBottomOf="@id/header"
-            app:layout_constraintStart_toEndOf="@id/guideV1"
-            app:layout_constraintEnd_toStartOf="@id/guideV2"
-            app:layout_constraintBottom_toTopOf="@id/publisher_recycler_view"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/publisher_recycler_view"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
             app:layout_constraintEnd_toStartOf="@id/guideV2"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@id/guideV1"
-            app:layout_constraintTop_toBottomOf="@id/publisherTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/header" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

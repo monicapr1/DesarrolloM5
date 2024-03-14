@@ -32,8 +32,7 @@ class ItemsAdapter (private val items: List<Item>, private val onClick: (Item) -
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = items[position]
         holder.itemNameTextView.text = item.name
-        holder.itemImageView.setImageResource(item.image)
-        Picasso.get().load(item.image).into(holder.itemImageView)
+        holder.itemImageView.setImageResource(item.image.toInt())
         holder.itemView.setOnClickListener {
             onClick(item)
         }

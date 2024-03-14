@@ -25,6 +25,6 @@ class DetailActivity : AppCompatActivity() {
         val heroe = Heroe.heroes.find { it.id == heroeId }
         txtHeroeName.text = heroe?.name
         txtHeroeDescription.text = heroe?.description
-        Picasso.get().load(heroe?.image).into(imgHeroe)
+        Picasso.get().load(heroe?.image ?: R.drawable.sh14).into(imgHeroe)
     }
 }

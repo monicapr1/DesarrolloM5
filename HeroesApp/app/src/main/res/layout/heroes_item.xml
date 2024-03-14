@@ -14,11 +14,11 @@
 
         <ImageView
             android:id="@+id/heroe_image"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:src="@drawable/sh2"
+            android:layout_width="300dp"
+            android:layout_height="110dp"
+            android:layout_weight="1"
             android:scaleType="centerCrop"
-            android:layout_weight="1"/>
+            android:src="@drawable/sh2" />
 
         <TextView
             android:id="@+id/heroe_name"

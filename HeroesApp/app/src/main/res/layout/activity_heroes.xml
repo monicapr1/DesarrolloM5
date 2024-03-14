@@ -44,7 +44,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/heroes_recycler_view"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="400dp"
             android:layout_marginTop="30dp"
             app:layout_constraintStart_toEndOf="@+id/guideV1"
             app:layout_constraintEnd_toStartOf="@+id/guideV2"

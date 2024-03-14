@@ -8,6 +8,7 @@ import android.widget.TextView
 import com.example.heroesapp.R
 import androidx.recyclerview.widget.RecyclerView
 import com.example.heroesapp.models.Heroe
+import com.squareup.picasso.Picasso
 
 
 class HeroesAdapter(val heroes: List<Heroe>, val onClick:(Heroe) -> Unit) : RecyclerView.Adapter<HeroesAdapter.HeroesViewHolder>() {
@@ -27,10 +28,11 @@ class HeroesAdapter(val heroes: List<Heroe>, val onClick:(Heroe) -> Unit) : Recy
     }
 
     override fun onBindViewHolder(holder: HeroesViewHolder, position: Int) {
-        val hero = heroes[position]
-        holder.heroNameTextView.text = hero.name
-        holder.itemView.setOnClickListener {
-            onClick(hero)
+            val hero = heroes[position]
+            holder.heroNameTextView.text = hero.name
+            Picasso.get().load(hero.image).into(holder.heroImageView)
+            holder.itemView.setOnClickListener {
+                onClick(hero)
+            }
         }
     }
-}

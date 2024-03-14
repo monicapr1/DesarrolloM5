@@ -21,7 +21,7 @@ class HeroeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_heroes)
 
-        val publisherId = intent.getIntExtra("publisherId", 0)
+        val publisherId = intent.getIntExtra("itemId", 0)
         val heroesMostrar = Heroe.heroes.filter { it.itemId == publisherId }
         txtHeroes = findViewById(R.id.txtHeroes)
         val publisher = Item.items.find { it.id == publisherId }
