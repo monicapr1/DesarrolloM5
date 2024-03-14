@@ -26,52 +26,58 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.95"/>
 
+
         <LinearLayout
-            android:layout_marginTop="10dp"
             android:id="@+id/header"
             android:layout_width="0dp"
             android:layout_height="100dp"
+            android:layout_marginTop="44dp"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
-            app:layout_constraintStart_toEndOf="@id/guideV1"
             app:layout_constraintEnd_toStartOf="@id/guideV2"
-            app:layout_constraintTop_toTopOf="parent"
-            android:gravity="center_vertical">
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/guideV1"
+            app:layout_constraintTop_toTopOf="parent">
 
-
-            <TextView
-                android:id="@+id/publisherTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorStatusBar"
-                android:text="@string/bienvenido"
-                android:textSize="24sp"
-                android:textStyle="bold"/>
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
 
             <ImageButton
-                android:backgroundTint="#00000000"
                 android:id="@+id/logoutButton"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:backgroundTint="#00000000"
                 android:src="@drawable/baseline_arrow_outward_24"
                 app:tint="@color/dcColorPrimaryDark" />
 
         </LinearLayout>
 
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/publisher_recycler_view"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toStartOf="@id/guideV2"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@id/guideV1"
             app:layout_constraintTop_toBottomOf="@+id/header" />
+
+        <TextView
+            android:id="@+id/publisherTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bienvenido"
+            android:textColor="@color/colorStatusBar"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/publisher_recycler_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/header" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
