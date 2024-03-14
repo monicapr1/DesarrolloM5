@@ -20,6 +20,7 @@ class HeroesAdapter(val heroes: List<Heroe>, val onClick:(Heroe) -> Unit) : Recy
         val heroImageView: ImageView = view.findViewById(R.id.heroe_image)
         val heroNameTextView: TextView = view.findViewById(R.id.heroe_name)
         val frameLayout: FrameLayout = view.findViewById(R.id.hero_frame_layout)
+//        val fondo_detailImageView : ImageView = view.findViewById(R.id.fondo_detail)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HeroesViewHolder {
@@ -43,6 +44,7 @@ class HeroesAdapter(val heroes: List<Heroe>, val onClick:(Heroe) -> Unit) : Recy
             holder.heroNameTextView.setTextColor(Color.parseColor("#FF0000"))
             holder.frameLayout.setBackgroundResource(R.drawable.circle_background_marvel)
         }
+//        holder.fondo_detailImageView.setImageResource(hero.image)
         holder.heroImageView.setImageResource(hero.image)
         holder.itemView.setOnClickListener {
             onClick(hero)

@@ -35,62 +35,61 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.25"/>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideH3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintGuide_percent="0.86" />
-
 
     <ImageView
+        android:id="@+id/fondo_detail"
         android:layout_width="wrap_content"
-        android:layout_height="270dp"
+        android:layout_height="200dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/dc"
+        android:src="@drawable/background1"
         android:tintMode="src_atop"
         app:layout_constraintBottom_toTopOf="@id/guideH1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:tint="#99000000" />
 
     <ImageView
-            android:id="@+id/imageViewHeroe"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
-            android:src="@drawable/sh2"
-            app:layout_constraintTop_toBottomOf="@id/guideH2"
-            app:layout_constraintStart_toEndOf="@id/guideV1"
-            app:layout_constraintBottom_toTopOf="@id/guideH3"
-            app:layout_constraintEnd_toStartOf="@id/guideV2"
-            app:layout_constraintHorizontal_bias="0"/>
+        android:id="@+id/imageViewHeroe"
+        android:layout_width="164dp"
+        android:layout_height="190dp"
+        android:src="@drawable/superhero1"
+        app:layout_constraintBottom_toTopOf="@+id/guideH1"
+        app:layout_constraintEnd_toStartOf="@id/guideV2"
+        app:layout_constraintStart_toEndOf="@id/guideV1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.046" />
 
     <TextView
-            android:id="@+id/txtHeroeName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/nombre_del_heroe"
-            app:layout_constraintStart_toEndOf="@id/imageViewHeroe"
-            app:layout_constraintEnd_toStartOf="@+id/guideV2"
-            app:layout_constraintTop_toBottomOf="@id/guideH1"
-            app:layout_constraintBottom_toTopOf="@id/guideH3"
-            android:layout_marginTop="30dp"
-            android:textSize="26sp"
-            android:lineBreakStyle="normal"/>
+        android:id="@+id/txtHeroeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:gravity="center"
+        android:lineBreakStyle="normal"
+        android:text="@string/nombre_del_heroe"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewHeroe"
+        app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/txtHeroeDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/descripcion_del_heroe"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/guideV2"
-        app:layout_constraintVertical_bias="0.0"
-        android:layout_marginTop="10dp"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/guideV1"
-        app:layout_constraintTop_toBottomOf="@id/imageViewHeroe"
-        android:text="@string/descripcion_del_heroe"
-        android:textSize="20sp" />
+        app:layout_constraintTop_toBottomOf="@+id/txtHeroeName"
+        app:layout_constraintVertical_bias="0.178" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

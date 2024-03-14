@@ -20,7 +20,7 @@
             android:layout_marginEnd="26dp"
             android:padding="10dp"
             android:scaleType="centerInside"
-            android:src="@drawable/sh2" />
+            android:src="@drawable/superhero1" />
 
     </FrameLayout>
 
