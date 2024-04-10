@@ -13,9 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BarCodeApp"
         tools:targetApi="31"
+        android:name=".BarCodeaApp"
         >
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
