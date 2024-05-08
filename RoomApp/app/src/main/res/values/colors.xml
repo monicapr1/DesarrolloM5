@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dcColorPrimary">#0078D4</color>
+    <color name="dcColorPrimaryDark">#005A9E</color>
+    <color name="dcColorAccent">#FFD700</color>
+
+    <color name="marvelColorPrimary">#FF0000</color>
+    <color name="marvelColorPrimaryDark">#800000</color>
+    <color name="marvelColorAccent">#FFFF00</color>
+
+    <color name="colorStatusBar">#7B0000</color>
+    <color name="textosBlancos">#FFFFFF</color>
+</resources>

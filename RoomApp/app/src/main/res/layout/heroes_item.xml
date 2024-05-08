@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <FrameLayout
+        android:id="@+id/hero_frame_layout"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:background="@drawable/circle_background_marvel"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/heroe_image"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_margin="22dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/superhero2" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/heroe_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre del héroe"
+        android:textColor="@color/colorStatusBar"
+        android:fontFamily="@font/poppinssemibold"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
