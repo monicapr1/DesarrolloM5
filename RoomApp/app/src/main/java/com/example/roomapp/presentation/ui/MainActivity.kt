@@ -40,12 +40,7 @@ class MainActivity : AppCompatActivity() {
                     Log.i("Heroe: ", superheroes.toString())
                     heroeRecicleView = findViewById(R.id.heroes_recycler_view)
                     heroeRecicleView.adapter = HeroAdapeter(it.heroes)
-                    heroeRecicleView.layoutManager = LinearLayoutManager(
-                        this@MainActivity,
-                        LinearLayoutManager.VERTICAL,
-                        false
-                    )
-
+                    heroeRecicleView.layoutManager = GridLayoutManager(this@MainActivity, 2)
                 }
             }
         }

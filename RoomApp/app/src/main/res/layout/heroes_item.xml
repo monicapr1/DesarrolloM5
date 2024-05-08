@@ -3,28 +3,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:gravity="center"
     android:orientation="vertical"
     android:padding="16dp">
 
-
+    <androidx.cardview.widget.CardView
+        android:id="@+id/heroe_card"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:elevation="4dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="75dp"
+        >
         <ImageView
             android:id="@+id/heroe_image"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:src="@drawable/superhero2"
-            android:background="@drawable/circle_background_marvel"
-            />
+            android:background="@null"
+            app:cardCornerRadius="10dp"  />
+
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/heroe_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="8dp"
         android:text="Nombre del héroe"
         android:textColor="@color/textosBlancos"
         android:fontFamily="@font/poppinssemibold"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginTop="13dp"/>
 
 </LinearLayout>
