@@ -29,5 +29,6 @@ class HeroAdapeter (val heroes: List<Heroe>) : RecyclerView.Adapter<HeroAdapeter
         val heroe = heroes[position]
         holder.name.text = heroe.name
         Picasso.get().load(heroe.image).into(holder.image)
+
     }
 }
